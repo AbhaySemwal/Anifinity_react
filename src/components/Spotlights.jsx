@@ -24,7 +24,7 @@ function Spotlights() {
   return (
     <div className='group'>
       <div className='spotlights h-[45rem] w-full m-auto absolute'>
-        <div style={{ backgroundImage: `url(${slides[currentIndex].url})`}}
+        <div style={{ backgroundImage: `url(${slides[currentIndex].url})`,display:'inline-block'}}
         className='w-full h-full bg-center bg-cover duration-500'>
         </div>
     </div>
