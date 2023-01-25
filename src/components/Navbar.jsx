@@ -24,10 +24,10 @@ function Navbar()
            
                 <section class="">
                 
-                <div class="flex flex-col    items-center justify-center px-6 py-8 my-10 mx-8 lg:py-0">
+                <div class="flex flex-col items-center justify-center px-6 py-8 my-10 mx-8 lg:py-0">
                 
-                    <div class="w-full rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 bg-gray-700 ">
-                        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <div class=" w-full shadow md:mt-0 sm:max-w-md xl:p-0">
+                        <div class="modal bg-gray-700 rounded-lg p-6 space-y-4 md:space-y-6 sm:p-8">
                         <button
                             className="relative border-0 text-slate-100 float-right left-4 bottom-6 text-3xl leading-none font-semibold outline-none focus:outline-none"
                             onClick={() => setShowModal(false)}>
