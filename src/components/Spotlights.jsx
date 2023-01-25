@@ -40,8 +40,8 @@ function Spotlights() {
       </div>
     </div>
       <p className='text-green-400 lg:text-xl md:text-base sm:text-sm pb-6'>#{currentIndex+1} Spotlight</p>
-      <span className=' text-white lg:text-5xl md:text-4xl sm:text-3xl font-normal'>{slides[currentIndex].title}</span>
-      <div class="flex py-2 pt-4 lg:text-sm md:text-xs sm:text-sm text-white">
+      <span className=' text-white text-3xl lg:text-5xl  font-normal'>{slides[currentIndex].title}</span>
+      <div class="flex py-2 pt-4 text-sm text-white">
         <span className='flex pr-2'><span className='pt-0.5 pr-1'><FaPlayCircle/></span> TV</span>
         <span className='flex pr-2'><span className='pt-0.5 px-1'><FaClock/></span>{slides[currentIndex].time}</span>
         <span className='flex'><span className='pt-0.5 px-1'><FaCalendar/></span>{slides[currentIndex].date}</span>
