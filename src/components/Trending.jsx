@@ -49,7 +49,7 @@ const Trending = () => {
 
   return (
     <div className='pt-96'>
-        <div className="z-inherit carousel py-8 my-10 mx-8">
+        <div className="z-inherit carousel py-8 pt-14 my-10 mx-8">
       <h2 className="text-4xl pl-2 leading-8 font-semibold my-6 text-green-500">
         Trending
       </h2>
