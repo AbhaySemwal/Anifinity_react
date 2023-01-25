@@ -1,7 +1,11 @@
 import {FaTwitter,FaReddit,FaDiscord,FaTelegram } from "react-icons/fa";
-
+import slides from './anidata';
+import React, { useState } from 'react';
+import { FaClock ,FaCalendar,FaPlayCircle} from 'react-icons/fa';
 function Navbar()
 {
+    const [showModal, setShowModal] = React.useState(false);
+  
     return(
         <div>
             <nav class="px-2 py-2 absolute w-full z-20 top-0 left-0">
@@ -11,8 +15,64 @@ function Navbar()
                 <span class="self-center text-2xl font-black whitespace-nowrap dark:text-white">Anifinity</span>
             </a>
             <div class="flex md:order-2">
-                <button type="button" class="text-black bg-green-500 hover:bg-green-600 font-normal rounded-lg text-md px-4 py-2 text-center ">Login</button>
+                <button type="button" onClick={() => setShowModal(true)} class="text-black bg-green-500 hover:bg-green-600 font-normal rounded-lg text-md px-4 py-2 text-center ">Login</button>
+
+        {showModal ? (
+        <>
+          <div
+            className="justify-center  items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+           
+                <section class="">
                 
+                <div class="flex flex-col    items-center justify-center px-6 py-8 my-10 mx-8 lg:py-0">
+                
+                    <div class="w-full rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 bg-gray-700 ">
+                        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <button
+                            className="relative border-0 text-slate-100 float-right left-4 bottom-6 text-3xl leading-none font-semibold outline-none focus:outline-none"
+                            onClick={() => setShowModal(false)}>
+                            <span className="text-slate-100 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                            ×
+                            </span>
+                        </button>
+                            <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                                Sign in to your account
+                            </h1>
+                            <form class="space-y-4 md:space-y-6" action="#">
+                                <div>
+                                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required=""/>
+                                </div>
+                                <div>
+                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                                    <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required=""/>
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="text-sm pl-16 first-letter:font-medium text-primary-600 hover:underline text-blue-500">Forgot password?</a>
+                                </div>
+                                <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium bg-blue-600 rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
+                                <p class="text-sm font-light  dark:text-gray-400">
+                                    Don’t have an account yet? <a href="#" class="font-medium text-blue-500 text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </section>
+              </div>
+    
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
+
             <form class="flex pl-2 items-center">   
                 <div class="relative w-full">
                     <input type="text" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block lg:w-full w-36 py-2.5 px-2  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Anime..." required/>
