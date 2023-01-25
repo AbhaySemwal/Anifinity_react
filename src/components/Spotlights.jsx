@@ -28,7 +28,17 @@ function Spotlights() {
         className='w-full h-full bg-center bg-cover duration-500'>
         </div>
     </div>
-    <div className='justify-center relative items-center lg:pr-96 md:pr-60 sm:pr-36 pl-20 top-60'>
+    <div className='justify-center h-60 relative items-center lg:pr-96 md:pr-60 sm:pr-36 pl-20 top-60'>
+    <div className=''>
+        {/* Left Arrow */}
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <BsChevronCompactLeft onClick={prevSlide} size={30} />
+        </div>
+        {/* Right Arrow */}
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <BsChevronCompactRight onClick={nextSlide} size={30} />
+      </div>
+    </div>
       <p className='text-green-400 lg:text-xl md:text-base sm:text-sm pb-6'>#{currentIndex+1} Spotlight</p>
       <span className=' text-white lg:text-5xl md:text-4xl sm:text-3xl font-normal'>{slides[currentIndex].title}</span>
       <div class="flex py-2 pt-4 lg:text-sm md:text-xs sm:text-sm text-white">
@@ -103,14 +113,6 @@ function Spotlights() {
     </>
     </div>
     
-      {/* Left Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-        <BsChevronCompactLeft onClick={prevSlide} size={30} />
-      </div>
-      {/* Right Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-        <BsChevronCompactRight onClick={nextSlide} size={30} />
-      </div>
     </div>
   );
 }
